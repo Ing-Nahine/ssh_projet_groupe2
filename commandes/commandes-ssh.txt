@@ -1,0 +1,45 @@
+===========================================
+   COMMANDES SSH - GUIDE DE RÉFÉRENCE
+===========================================
+
+--- INSTALLATION SERVEUR ---
+sudo apt update
+sudo apt install openssh-server
+sudo systemctl start ssh
+sudo systemctl enable ssh
+sudo systemctl status ssh
+sudo ufw allow 22/tcp
+ip a
+
+--- CONNEXION CLIENT ---
+ssh utilisateur@ip
+ssh -p port utilisateur@ip
+exit
+
+--- TRANSFERT SCP ---
+# Local → Distant
+scp fichier user@ip:/chemin/
+
+# Distant → Local
+scp user@ip:/fichier ./
+
+# Dossier récursif
+scp -r dossier/ user@ip:/chemin/
+
+--- DIAGNOSTIC ---
+sudo systemctl status ssh
+sudo tail -f /var/log/auth.log
+ping ip
+nc -zv ip 22
+sudo netstat -tulpn | grep :22
+
+--- GÉNÉRATION CLÉS SSH ---
+ssh-keygen -t rsa -b 4096
+ssh-copy-id user@ip
+ssh -i ~/.ssh/cle_privee user@ip
+
+--- CONFIGURATION ---
+sudo nano /etc/ssh/sshd_config
+sudo systemctl restart ssh
+
+===========================================
