@@ -1,6 +1,6 @@
 # Connexion à distance via SSH (Réseau Local)
 
-## 📋 Description
+##  Description
 Projet d'exposé sur la mise en œuvre de connexions SSH dans un réseau local.
 
 **Groupe 2**
@@ -12,14 +12,14 @@ Projet d'exposé sur la mise en œuvre de connexions SSH dans un réseau local.
 
 ---
 
-## 🎯 Objectifs
+##  Objectifs
 - Installer un serveur SSH sous Linux
 - Établir des connexions SSH depuis Linux et Windows
 - Transférer des fichiers via SCP
 
 ---
 
-## 📚 Documents
+##  Documents
 
 - 📄 [Rapport complet (PDF)](./rapport.pdf)
 - 🎨 [Présentation PowerPoint (PDF)](./presentation.pdf)
